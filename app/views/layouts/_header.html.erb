@@ -1,8 +1,7 @@
-
   <div class="MainHeader">
-   <a href="/"><div class="logo"></div></a> 
+   <%= link_to "" , "root_path", :class => "logo" %> 
    <div class="login_part"><a href="#" style="color:white;">SIGN UP NOW!</a></div> 
-   <a class="main_menu" href="/">Home</a>
-   <a class="main_menu" href="#">AppStore</a>
-   <a class="main_menu" href="#">Sign In</a>
+   <%= link_to "Home", "root_path", :class => "main_menu" %>
+   <%= link_to "AppMarket", "#", :class => "main_menu" %>
+   <%= link_to "Sign In", "#", :class => "main_menu" %>
   </div>
