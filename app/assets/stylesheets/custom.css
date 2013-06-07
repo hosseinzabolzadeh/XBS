@@ -1,0 +1,93 @@
+.MainHeader
+{
+ height: 100px;
+ width: 100%;
+ margin-left: 0px;
+ padding:0 0 0 0px;
+ background-color: rgb(248, 247, 239);
+}
+
+body
+{
+ margin-left: 0px;
+ margin-right: 0px;
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+
+.logo
+{
+ margin-left:50px;
+ margin-top: 25px;
+ background-image: url("BSLogo.png");
+ background-repeat: no-repeat;
+ float: left;
+ height: 44px;
+ width: 298px;
+}
+
+.login_part
+{
+ height:63px;
+ width: 215px;
+ float: right;
+ text-align: center;
+ margin-left: 30px;
+ font-size: 25px;
+ color: white;
+ margin-right:100px;
+ padding-top: 37px;
+ vertical-align: middle;
+ background-color: rgb(103,175,65);
+}
+
+a
+{
+	text-decoration: none;
+}
+
+.main_menu
+{
+ float:right;
+ color: rgb(102,102,102);
+ font-size:20px;
+ margin-top: 37px;
+ padding-left:10px;
+ padding-right:10px;
+}
+
+.footer
+{
+ background-color: rgb(51,51,51);
+ height:280px;
+ width:100%;
+}
+
+.footer_column
+{
+ width: 400px;
+}
+
+.footer_menu
+{
+ float: left;
+ color:white;
+ font-size:26px;
+ padding-top: 20px;
+}
+
+.footer_seprator
+{
+
+}
+
+.footer_img
+{
+ clear:both;
+}
+
+
+a.footer_menu
+{
+	font-size: 20px;
+}

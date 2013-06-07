@@ -1,0 +1,89 @@
+.arrow-up {
+	width: 0px; 
+	height: 0px; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid;
+	color: rgb(103,175,65);
+	clear: both;
+}
+
+.arrow-down {
+	width: 0px; 
+	height: 0px; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid;
+	color: rgb(51,51,51);
+}
+
+.banner
+{
+ height: 500px;
+ width: 100%;
+ color: white;
+ background-color: rgb(51,51,51);
+}
+
+
+
+.banner_text
+{
+	padding-top: 0px;
+	border-width: 0px;
+	border-color: red;
+	height: 100%;
+	width: 50%;
+	float: left;
+	margin: "0,0,0,0px";
+	padding: "0,0,0,0px";
+}
+
+.banner_image
+{	
+	padding-top: 0px;
+	border-width: 0px;
+	border-color: white;
+	height: 100%;
+	width: 50%;
+	background-repeat: no-repeat;
+	float: left;
+    margin: "0,0,0,0px";
+	padding: "0,0,0,0px";
+}
+
+
+.banner_line1
+{
+	font-size: 100px;
+	font-style: bold;
+	color: yellow;
+	text-align: center;
+	line-height: 100px;
+}
+
+.banner_line2
+{
+	font-size: 40px;
+	line-height: 50px;
+	text-align: center;
+	color: lightgray;
+}
+
+.banner_line3
+{
+	font-size: 15px;
+	text-align: center;
+	width: 70%;
+	color: white;
+}
+
+
+#more_info
+{
+	font-family: cursive;
+	font-style: bold;
+	font-size: 50px;
+	color: white;
+	line-height: 50px;
+}

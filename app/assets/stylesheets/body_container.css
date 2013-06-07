@@ -1,0 +1,50 @@
+.container1
+{
+ height: 350px;
+ width: 100%;
+ color: white;
+ background-color: rgb(255,185,0);
+}
+
+.container2
+{
+ height: 350px;
+ width: 100%;
+ color: white;
+ background-color: rgb(103,175,65);
+}
+
+.top_body_container
+{
+	border-width: 0px;
+	border-color: red;
+	height: 310px;
+	width: 100%;
+	float: left;
+	margin: "0,0,0,0px";
+	padding: "0,0,0,0px";
+}
+.top_body_container.p
+{
+ font-size: 50px;
+}
+
+.left_container
+{
+	height: 310px;
+	width: 50%;
+	float: left;
+	margin: "0,0,0,0px";
+	padding: "0,0,0,0px";
+}
+
+.right_container
+{	
+	border-width: 0px;
+	border-color: white;
+	height: 310px;
+	width: 50%;
+	float: left;
+    margin: "0,0,0,0px";
+	padding: "0,0,0,0px";
+}
