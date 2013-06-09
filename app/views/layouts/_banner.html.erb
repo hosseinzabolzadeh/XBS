@@ -1,9 +1,9 @@
   <div class="banner">
    <div class="banner_text" align="center">
-    <div style="font-weight: bold; padding-top:120px;" class="banner_line1">YOUR APPS</div>  
-    <div style="font-weight: bold;" class="banner_line2">On the Cloud</div>
-    <div style="color: rgb(204, 204, 204); font-family: Standard Symbols L;" class="banner_line3"><p><big>Build your application and push it into xamin SaaS market, in order to be run on clouds and make money for you</big></p></div> 	
-    <div id="more_info"><a style="color:white;" href="#">More Information</a></div>
+    <div style="font-weight: bold; padding-top:120px;" class="banner_line1"><%= @banner_title %></div>  
+    <div style="font-weight: bold;" class="banner_line2"><%= @banner_text1 %></div>
+    <div style="color: rgb(204, 204, 204); font-family: Standard Symbols L;" class="banner_line3"><p><big><%= @banner_text2 %></big></p></div> 	
+    <%= link_to "More Information", "#", :class => "more_info_link" %>
    </div>
    <div class="banner_image" align="center">
    	<img style="padding-top:60px;" src="./assets/Banner_Cloud.png" height="400" width="400">

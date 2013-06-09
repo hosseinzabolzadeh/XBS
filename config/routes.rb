@@ -1,5 +1,7 @@
 RailsTemplateApp::Application.routes.draw do
  
+  get "users/new"
+
   root :to => 'static_pages#home'
 
   # The priority is based upon order of creation:

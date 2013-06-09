@@ -8,7 +8,7 @@
 
 .container2
 {
- height: 350px;
+ height: 330px;
  width: 100%;
  color: white;
  background-color: rgb(103,175,65);
@@ -47,4 +47,9 @@
 	float: left;
     margin: "0,0,0,0px";
 	padding: "0,0,0,0px";
+}
+
+.learn_more_link
+{
+	color: darkblue;
 }

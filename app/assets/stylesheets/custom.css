@@ -63,6 +63,12 @@ a
  width:100%;
 }
 
+a.footer_link
+{
+	font-size:20px;
+	color:white;
+}
+
 .footer_column
 {
  width: 400px;

@@ -60,6 +60,7 @@
 	color: yellow;
 	text-align: center;
 	line-height: 100px;
+	text-transform: uppercase;
 }
 
 .banner_line2
@@ -79,11 +80,11 @@
 }
 
 
-#more_info
+.more_info_link
 {
-	font-family: cursive;
+	font-family: sans-serif;
 	font-style: bold;
-	font-size: 50px;
-	color: white;
+	font-size: 30px;
 	line-height: 50px;
+	color: white;
 }
