@@ -41,6 +41,11 @@ body
  background-color: rgb(103,175,65);
 }
 
+.signup_link
+{
+	color: white;
+}
+
 a
 {
 	text-decoration: none;
