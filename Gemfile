@@ -1,11 +1,13 @@
 source 'http://rubygems.org'
 gem 'rails'
+gem 'bcrypt-ruby', '3.0.1'
 group :development, :test do
 gem 'annotate' , '~> 2.4.1.beta'
 gem 'sqlite3', '1.3.5'
 gem 'rspec-rails', '2.9.0'
 gem 'capybara', '1.1.2'
 gem 'guard-rspec', '0.5.5'
+gem 'factory_girl_rails', '1.4.0'
 end
 gem 'bootstrap-sass', '2.0.0'
 group :assets do
