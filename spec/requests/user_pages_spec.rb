@@ -4,12 +4,12 @@ describe "User Pages" do
  subject { page }
  describe "sign up page" do
   before { visit signup_path }
-   it { should have_selector('h1', :text => 'Sign Up')}
+   it { should have_selector('h1', :text => 'SIGNUP')}
  end
  describe "profile page" do
   let(:user) { FactoryGirl.create(:user) }
   before { visit user_path(user)}
-  it { should have_selector('title', text: user.first_name) }
+  it { should have_selector('title', :text => user.first_name) }
  end
  describe "signup" do
   before { visit signup_path }
@@ -21,11 +21,11 @@ describe "User Pages" do
   end
   describe "with valid information" do
    before do
-    fill_in "first_name",               with: "Hossein"
-    fill_in "last_name",                with: "Zabolzadeh"
-    fill_in "email",                    with: "zabolzadeh@csri.ac.ir"
-    fill_in "password",                 with: "foobar"
-    fill_in "confirmation",             with: "foobar"
+    fill_in "first_name",               :with => "Hossein"
+    fill_in "last_name",                :with => "Zabolzadeh"
+    fill_in "email",                    :with => "zabolzadeh@csri.ac.ir"
+    fill_in "password",                 :with => "foobar"
+    fill_in "confirmation",             :with => "foobar"
    end
    it "should create a user" do
     expect { click_button submit }.to change(User, :count).by(1)

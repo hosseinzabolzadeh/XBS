@@ -1,0 +1,23 @@
+<% provide(:title, 'Sign in') %>
+<div class="top_horizontal_pannel_blue">
+      <div class="pannel_content">
+        <h1>SIGNIN TO XAMIN BUILD STUDIO</h1>
+        <h3>Login to Xamin Build Studio, to access to comprehensive online tools and building environment to create your appliance</h3>
+      </div>
+</div>
+<div class="narrow_top_pannel"></div>
+
+<div class="body_container">
+      <div class ="left_section">
+        <%= form_for(:session, :url => sessions_path) do |f| %>
+        <%= f.text_field :email,:value => "Email", :class => "input_text" %>
+        <%= f.password_field :password, :value => "---", :class => "input_text" %>
+        <%= f.submit "Sign in", :class => "input_button" %>
+        <% end %>
+        <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+      </div>
+      <div style="text-align: center;" class ="right_section">
+        <img src="assets/login_icon.gif">
+      </div>
+</div>
+
