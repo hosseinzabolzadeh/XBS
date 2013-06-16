@@ -42,12 +42,12 @@ h3.pannel_title
 	margin-top:0px;
 	padding-top:12px;
 	color:rgb(100,100,100);
-	padding-left:50px;
+	padding-left:50;
 	font-size:20px;
 }
 .user_info
 {
-	width:40%;
+	width:45%;
 	height:100%;
 	float:left;
 }
@@ -200,35 +200,4 @@ h3.pannel_title
 	width: 70%;
 	height: 100%;
 	color: white;
-}
-
-
-.action_panel
-{
-	float:right;
-	height:100%;
-	margin-right: 95px;
-	width: 600px;
-	padding-right: 0px;
-}
-
-.action_item
-{
-	height:100%;
-	text-align:center;
-	color:white;
-	width: 33%;
-	float:left;
-}
-
-.profile_link
-{
-	color: white;
-}
-
-.action_link
-{
-	color: white;
-	margin-top: 10px;
-	font-size: 23px;
 }

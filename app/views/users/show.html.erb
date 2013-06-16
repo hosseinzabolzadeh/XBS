@@ -1,4 +1,45 @@
 <%=provide(:title, @user.first_name) %>
-<b>First Name:</b><%= @user.first_name %>
-<b>Last Name</b><%= @user.last_name %>
-<b>Email Address</b><%= @user.email %>
+<div class="user_profile_pannel">
+ <div class="user_info">
+  <img class="user_img" src=".././assets/profile_image.png">
+   <div style="float:left;">
+    <h1 class="pannel_title"><%= @user.first_name + " " + @user.last_name %></h1>
+    <%= link_to "Edit Account", '#', :class => 'profile_link' %>
+    <br>
+    <%= link_to "View Your Appliances", '#', :class => 'profile_link' %>
+   </div>
+ </div>
+ <div class="action_panel">
+  <div class="action_item" style="background-color:rgb(155, 79, 151);">
+   <br>
+   <%= link_to "Create New App", '#', :class => 'action_link' %>
+   <br>
+   <br>
+   <img height="60" width="60" src=".././assets/App.png">
+  </div>
+  <div class="action_item" style="background-color:rgb(103, 177, 65);">
+   <br>
+   <%= link_to "Create New vApp", '#', :class => 'action_link' %>
+   <br>
+   <br>
+   <img height="60" width="60" src=".././assets/vApp.png">
+  </div>
+  <div class="action_item" style="background-color:rgb(51,102,153);">
+   <br>
+   <%= link_to "Test your Apps", '#', :class => 'action_link' %>
+   <br>
+   <br>
+   <img height="60" width="50" src=".././assets/test.png">
+  </div>
+ </div>
+</div>
+<div class="app_pannel">
+ <h3 class="pannel_title">Your Public Appliances</h3>
+</div>
+<div class="app_container">
+</div>
+<div class="app_pannel">
+ <h3 class="pannel_title">Your Private Appliances</h3>
+</div>
+<div class="app_container">
+</div>
