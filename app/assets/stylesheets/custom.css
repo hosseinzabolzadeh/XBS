@@ -15,6 +15,11 @@ body
  margin-bottom: 0px;
 }
 
+.login_notification_Panel
+{
+  text-align: center;
+}
+
 .logo
 {
  margin-left:50px;
@@ -26,24 +31,57 @@ body
  width: 298px;
 }
 
-.login_part
+.login_part_not_logged_in
 {
- height:63px;
+ height:100px;
  width: 215px;
  float: right;
  text-align: center;
- margin-left: 30px;
+ margin-left: 0px;
  font-size: 25px;
  color: white;
  margin-right:100px;
- padding-top: 37px;
  vertical-align: middle;
- background-color: rgb(103,175,65);
+ margin-top: auto;
+ background-color: rgb(103,175,56);
+}
+
+
+
+.login_part_logged_in
+{
+ height:100px;
+ width: 215px;
+ float: right;
+ text-align: center;
+ margin-left: 0px;
+ font-size: 25px;
+ color: white;
+ margin-right:100px;
+ vertical-align: middle;
+ margin-top: auto;
+ background-color: rgb(81,70,56);
+}
+
+.menu_pannel
+{
+  float: right;
+  padding-top: 40px;
+}
+
+.login_part_Top_header
+{
+  height: 45px;
+  width: 100%;
+  background-color: rgb(100,89,76);
+  margin-top: auto;
 }
 
 .signup_link
 {
 	color: white;
+  text-transform: uppercase;
+  vertical-align: middle;
 }
 
 a
@@ -53,7 +91,6 @@ a
 
 .main_menu
 {
- float:right;
  color: rgb(102,102,102);
  font-size:20px;
  margin-top: 37px;

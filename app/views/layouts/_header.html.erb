@@ -1,12 +1,32 @@
 <div class="MainHeader">
    <%= link_to "" , root_path, :class => "logo" %> 
-   <div class="login_part">
     <% if signed_in? %>
-     <%= link_to current_user.first_name, '#', :class => "signup_link" %>
-    <% else %> 
+    <div class="login_part_logged_in">
+     <div class="login_part_Top_header">
+      <%= link_to current_user.first_name, current_user, :class => "signup_link" %>
+     </div>
+     <div class="login_notification_Panel">
+      <table style="text-align: center; margin:auto;" border="0" cellpadding="2" cellspacing="10">
+       <tbody>
+        <tr>
+         <td style="vertical-align: top;"><img style="width: 35px; height: 35px;" src=".././assets/message.png"><br>
+         </td>
+         <td style="vertical-align: top; text-align: center;"><img style="width: 32px; height: 32px;" src=".././assets/update.png"><br>
+         </td>
+         <td style="vertical-align: top;"><img style="width: 32px; height: 30px;" src=".././assets/alert.png"><br>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     </div>
+    <% else %>
+    <div class="login_part_not_logged_in">
      <%= link_to "SIGN UP NOW!", signup_path, :class => "signup_link" %>
-    <% end %>
-   </div> 
+     </div>
+       <% end %>
+    
+       <div class="menu_pannel">
    <%= link_to "Home", root_path, :class => "main_menu" %>
    <%= link_to "AppMarket", "http://market.xamin.ir", :class => "main_menu" %>
     <% if signed_in? %>
@@ -16,4 +36,5 @@
    <% else %>
     <%= link_to "Sign in", signin_path, :class => "main_menu" %>
    <% end %>
+</div>
 </div>
