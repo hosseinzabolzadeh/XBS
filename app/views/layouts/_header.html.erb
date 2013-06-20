@@ -31,7 +31,7 @@
    <%= link_to "AppMarket", "http://market.xamin.ir", :class => "main_menu" %>
     <% if signed_in? %>
     <%= link_to "My Profile", current_user, :class => "main_menu" %>
-    <%= link_to "Settings", '#', :class => "main_menu" %>
+    <%= link_to "Settings", edit_user_path(current_user), :class => "main_menu" %>
     <%= link_to "Sign out", signout_path, :method => "delete", :class => "main_menu" %>
    <% else %>
     <%= link_to "Sign in", signin_path, :class => "main_menu" %>

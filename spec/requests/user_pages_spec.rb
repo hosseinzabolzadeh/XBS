@@ -31,5 +31,18 @@ describe "User Pages" do
     expect { click_button submit }.to change(User, :count).by(1)
    end
   end
+
+ describe "edit" do
+  let(:user) {FactoryGirl.create(:user)}
+  before {visit edit_user_path(user)}
+  describe "edit page" do
+   it {should have_selector('h3', :text => "Update your profile")}
+   it {should have_selector('title', :text => "Edit user")}
+  end
+  describe "with invalid information" do
+    before { click_button "Save changes" }
+    it {should have_content('error')}
  end
+end
+end
 end

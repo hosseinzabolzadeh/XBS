@@ -23,6 +23,6 @@ class User < ActiveRecord::Base
   validate(:password_confirmation, :presence => true)
   private
   def create_remember_token
-   self.remember_token = SecureRandom.urlsafe_base64
+   self.remember_token = SecureRandom.hex
   end
 end
