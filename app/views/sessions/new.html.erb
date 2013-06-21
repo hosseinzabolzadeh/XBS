@@ -10,7 +10,7 @@
 <div class="body_container">
       <div class ="left_section">
         <%= form_for(:session, :url => sessions_path) do |f| %>
-        <%= f.text_field :email,:value => "Email", :class => "input_text" %>
+        <%= f.text_field :email, :value => "Email", :class => "input_text" %>
         <%= f.password_field :password, :value => "---", :class => "input_text" %>
         <%= f.submit "Sign in", :class => "input_button" %>
         <% end %>
