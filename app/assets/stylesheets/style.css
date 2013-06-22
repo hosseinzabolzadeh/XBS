@@ -1,0 +1,24 @@
+.boxgrid{background-image:none;background-repeat:repeat;background-attachment:scroll;
+                 background-position:0 0;width:292px;height:197px;border:solid px #e2d9c0;
+                 overflow:hidden;position:relative;margin-right:5px;margin-bottom:5px;margin-left:0px}
+                 
+ .boxgrid img{position:absolute;top:0;left:0;border:0}
+ .boxcaption{color:#fff;position:relative; background:rgb(51,152,182);background:rgba(51,152,182,.9);height:100px;width:274px;
+                        padding-top:12px;padding-left:18px}
+                        
+.boxgrid:active{border-top-width:7px;border-bottom-width:5px}
+
+.captionfull .boxcaption{top:260px;left:0;text-shadow:none !important}
+
+
+ .boxcaption{color:#fff;position:absolute; background:rgb(51,152,182);background:rgb(51,51,51);height:130px;width:325px;
+                        padding-top:12px;padding-left:0px}
+                        
+.boxgrid:active{border-top-width:7px;border-bottom-width:5px}
+.captionfull .boxcaption{top:260px;left:0;text-shadow:none !important}
+.boxcaption .caption{font-size:14px;position:absolute;bottom:30px}
+.boxcaption .descr{display: none; font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';}
+.boxcaption .title{color:#fff;font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;display:block;text-shadow:none}
+
+.captionfull .boxcaption{top:260px;left:0;text-shadow:none !important}
+.boxcaption .caption{font-size:14px;position:absolute;bottom:30px}

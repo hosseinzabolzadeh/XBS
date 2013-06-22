@@ -17,7 +17,8 @@ body
 .app_pannel
 {
  width:100%;
- height:50px;
+ height:53px;
+ margin-bottom: 20px;
  background-color: rgb(230, 230, 230);
 }
 
@@ -42,8 +43,9 @@ h3.pannel_title
 	margin-top:0px;
 	padding-top:12px;
 	color:rgb(100,100,100);
-	padding-left:50px;
-	font-size:20px;
+	font-size:24px;
+	float: left;
+	margin-left: 160px;
 }
 .user_info
 {
@@ -231,4 +233,63 @@ h3.pannel_title
 	color: white;
 	margin-top: 10px;
 	font-size: 23px;
+}
+
+
+.dashboard_title
+{
+	font-size: 23px;
+	padding-top: 100px;
+	line-height:50px;
+	color:white;
+	text-transform:uppercase;
+	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
+}
+
+.dashboard_item
+{
+	height: 177px;
+	width: 325px;
+	background-color: rgb(155, 79, 151);
+	float:left;
+}
+
+.actions_title
+{
+	font-size: 25px;
+	color:rgb(100,100,100);
+	padding-top:30px;
+	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
+	padding-left: 8px;
+	padding-top: 50px;
+}
+
+
+.dashboard_button_left
+{
+	float:left;
+	width:160px;
+	height:60px;
+	background-color:rgb(102,102,102);
+}
+
+.dashboard_button_right
+{
+	float:right;
+	width:160px;
+	height:60px;
+	background-color:rgb(102,102,102);
+}
+
+.dashboard_text
+{
+	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
+}
+
+
+.statistic_panel
+{
+	height: 470px;
+	width: 100%;
+	background-color: rgb(51,102,153);
 }

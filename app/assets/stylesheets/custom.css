@@ -84,6 +84,14 @@ body
   vertical-align: middle;
 }
 
+.login_link
+{
+  color: white;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
 a
 {
 	text-decoration: none;
@@ -95,7 +103,7 @@ a
  font-size:20px;
  margin-top: 37px;
  padding-left:10px;
- padding-right:10px;
+ padding-right:25px;
 }
 
 .admin_main_menu
