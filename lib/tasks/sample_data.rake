@@ -10,6 +10,14 @@ namespace :db do
   password = "password"
   User.create!(:first_name => first_name, :last_name => first_name, :email => email, :password => password, :password_confirmation => password)
   end
+  
+  users = User.all(:limit => 6)
+  10.times do
+   app_name = Faker::Lorem.words(1)
+   app_des = Faker::Lorem.sentence(5)
+   app_icon =  Faker::Lorem.words(1)
+   users.each { |user| user.appliances.create!(:name => app_name, :description => app_des, :icon => app_icon, :activation => true ) }
+  end
  end
 end
 

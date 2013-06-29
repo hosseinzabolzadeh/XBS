@@ -10,7 +10,7 @@
 <div class="body_container">
       <div class ="left_section">
         <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
+        <%= render 'shared/error_messages', :object => f.object %>
         <%= f.text_field :first_name,:value => "First Name", :class => "input_text" %>
         <%= f.text_field :last_name, :value => "Last Name", :class => "input_text" %>
         <%= f.text_field :email, :value => "Email", :class => "input_text" %>

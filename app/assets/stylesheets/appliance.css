@@ -1,0 +1,21 @@
+.app_item
+{
+	height: 180px;
+	width: 500px;
+	background-color: rgb(230, 230, 230);
+	float: left;
+	margin: 10px;
+}
+
+.app_icon
+{
+	height: 120px;
+	width: 120px;
+	margin-top: 24px;
+
+}
+
+.app_container
+{
+
+}

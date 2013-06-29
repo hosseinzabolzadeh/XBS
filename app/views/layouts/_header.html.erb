@@ -11,7 +11,7 @@
            </li>
            <li class='has-sub '><%= link_to "Settings", edit_user_path(current_user) %>
            </li>
-           <li class='has-sub '><%= link_to "Sign out", signout_path, :method => "delete" %>
+           <li class='has-sub '><%= link_to "Sign out", signout_path, :method => "delete"%>
            </li>
         </ul>
      </li>
@@ -22,11 +22,11 @@
       <table style="text-align: center; margin:auto;" border="0" cellpadding="2" cellspacing="10">
        <tbody>
         <tr>
-         <td style="vertical-align: top;"><img style="width: 35px; height: 35px;" src=".././assets/message.png"><br>
+         <td style="vertical-align: top;"><img style="width: 35px; height: 35px;" src=<%=asset_path "message.png"%>><br>
          </td>
-         <td style="vertical-align: top; text-align: center;"><img style="width: 32px; height: 32px;" src=".././assets/update.png"><br>
+         <td style="vertical-align: top; text-align: center;"><img style="width: 32px; height: 32px;" src=<%=asset_path "update.png"%>><br>
          </td>
-         <td style="vertical-align: top;"><img style="width: 32px; height: 30px;" src=".././assets/alert.png"><br>
+         <td style="vertical-align: top;"><img style="width: 32px; height: 30px;" src=<%=asset_path "alert.png"%>><br>
          </td>
         </tr>
        </tbody>
@@ -45,9 +45,10 @@
    <%= link_to "Home", root_path, :class => "main_menu" %>
    <%= link_to "AppMarket", "http://market.xamin.ir", :class => "main_menu" %>
    <%= link_to "Help", '#', :class => "main_menu" %>
-    <% if signed_in? %>
+    <% if signed_in? && admin_user? %>
     <br>
     <%= link_to "Users", users_path, :class => "admin_main_menu" %>
+    <%= link_to "Appliances", user_appliances_path(current_user), :class => "admin_main_menu" %>
    <% end %>
 </div>
 </div>

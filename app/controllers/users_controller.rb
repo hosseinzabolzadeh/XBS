@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
- before_filter :signed_in_user, :only => [:index, :edit, :update]
- before_filter :correct_user, :only => [:edit, :update, :show] 
+ before_filter :signed_in_user, :only => [:index, :edit, :update, :apps]
+ before_filter :correct_user, :only => [:edit, :update, :show, :apps] 
  before_filter :admin_user, :only => :destroy
 
   def show
@@ -27,6 +27,12 @@ class UsersController < ApplicationController
   def edit
   end
   
+  def apps
+   @user=User.find(params[:id])
+   @public_apps=@user.appliances.find_all_by_activation(true)
+   @private_apps=@user.appliances.find_all_by_activation(false)
+  end
+  
   def new
    @user=User.new
   end
@@ -48,13 +54,6 @@ class UsersController < ApplicationController
 
  private
 
-  def signed_in_user
-   unless signed_in?
-    store_location
-    redirect_to signin_path , :notice => "Please sign in first"
-   end
-  end
-  
   def correct_user
    @user=User.find(params[:id])
    redirect_to(root_path) unless current_user?(@user)

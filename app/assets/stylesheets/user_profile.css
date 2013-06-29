@@ -270,7 +270,10 @@ h3.pannel_title
 	float:left;
 	width:160px;
 	height:60px;
+	padding-top: 3px;
 	background-color:rgb(102,102,102);
+	font-size: 15px;
+	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
 }
 
 .dashboard_button_right
@@ -278,11 +281,15 @@ h3.pannel_title
 	float:right;
 	width:160px;
 	height:60px;
+	padding-top: 3px;
+	font-size: 15px;
 	background-color:rgb(102,102,102);
+	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
 }
 
 .dashboard_text
 {
+	font-size: 15px;
 	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
 }
 

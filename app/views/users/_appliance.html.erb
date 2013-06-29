@@ -1,0 +1,7 @@
+<li>
+  <%= link_to app.name, app %>
+  <%= link_to app.description, app %>
+  <img src=<%=asset_path "/apps/102/MySQL.png"%>>
+
+  | <%= link_to "delete", app, :method => :delete, :confirm => "You Sure?" %>
+</li>
