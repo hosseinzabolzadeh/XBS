@@ -2,7 +2,11 @@ RailsTemplateApp::Application.routes.draw do
  
   resources :users do 
    resources :appliances
+   member do
+    get 'dashboard'
+   end
   end
+
   resources :sessions, :only => [:new, :create, :destroy]
 
 

@@ -10,6 +10,9 @@ class AppliancesController < ApplicationController
  end
 
  def index
+   if (User.find(params[:user_id]) != current_user) #No need to read from database. Improve it by params[:user_id] != current_user.id
+    redirect_to root_path
+   end
    @user=current_user
    @public_apps=current_user.appliances.find_all_by_activation(true)
    @private_apps=current_user.appliances.find_all_by_activation(false)
