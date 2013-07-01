@@ -1,0 +1,11 @@
+<li id="<%= app_feed_item.id %>">
+   <img height="70" width="50" src=<%=asset_path "zabolzadeh.jpg"%>>
+ <span class="user">
+  <%= link_to app_feed_item.user.first_name, app_feed_item.user %>
+  <%= link_to app_feed_item.user.last_name, app_feed_item.user %>
+ </span>
+ <span class="content"><%= app_feed_item.name %></span>
+ <span class="timestamp">
+  Created <%= time_ago_in_words(app_feed_item.created_at) %> ago.
+ </span>
+</li>

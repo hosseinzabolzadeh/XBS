@@ -1,0 +1,36 @@
+<% provide(:title, @title) %>
+<div class="row">
+ <aside class="span4">
+  <section>
+   <img height="120" width="90" src=<%=asset_path "zabolzadeh.jpg"%>>
+   <h1><%= @user.first_name + @user.last_name %></h1>
+   <span><%= link_to "view my profile", @user %></span>
+   <span><b>Appliances:</b> <%= @user.appliances.count %></span>
+  </section>
+  <section>
+   <%= render 'shared/followstats' %>
+   <% if @users.any? %>
+    <div class="user avatars">
+     <% @users.each do |user| %>
+      <img height="70" width="50" src=<%=asset_path "zabolzadeh.jpg"%>>
+     <% end %>
+    </div>
+   <% end %>
+  </section>
+ </aside>
+ <div class="span8">
+  <h3><%= @title %></h3>
+  <% if @users.any? %>
+   <ul class="users">
+    <%= render @users %>
+   </ul>
+   <%= will_paginate %>
+  <% end %>
+ </div>
+</div>
+
+
+<div>
+  <h1>App Feeds</h1>
+  <%= render 'shared/app_feed' %>
+</div>

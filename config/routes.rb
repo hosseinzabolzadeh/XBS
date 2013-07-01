@@ -5,9 +5,13 @@ RailsTemplateApp::Application.routes.draw do
    member do
     get 'dashboard'
    end
+   member do
+    get :following, :followers
+   end
   end
 
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :relationships, :only => [:create, :destroy]
 
 
   match '/signup', :to => 'users#new'

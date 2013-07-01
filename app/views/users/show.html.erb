@@ -5,3 +5,10 @@
  <span><b>Family: </b><%= @user.last_name %></span> <br>
  <span><b>Email Address: </b><%= @user.email %></span> <br>
 </div>
+
+<div>
+ <%=render 'shared/followstats' %>
+</div>
+<div>
+ <%= render 'follow_form' if signed_in? %>
+</div>

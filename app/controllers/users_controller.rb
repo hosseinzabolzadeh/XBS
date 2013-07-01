@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
- before_filter :signed_in_user, :only => [:index, :edit, :update, :apps]
- before_filter :correct_user, :only => [:edit, :update, :dashboard, :apps] 
+ before_filter :signed_in_user, :only => [:index, :edit, :update, :following, :followers]
+ before_filter :correct_user, :only => [:edit, :update, :dashboard] 
  before_filter :admin_user, :only => :destroy
 
   def show
@@ -30,12 +30,6 @@ class UsersController < ApplicationController
   def edit
   end
   
-  def apps
-   @user=User.find(params[:id])
-   @public_apps=@user.appliances.find_all_by_activation(true)
-   @private_apps=@user.appliances.find_all_by_activation(false)
-  end
-  
   def new
    @user=User.new
   end
@@ -54,6 +48,24 @@ class UsersController < ApplicationController
   def index
    @users=User.paginate(:page => params[:page])
   end
+
+  def following
+   @title = "Following"
+   @user = User.find(params[:id])
+   @users = @user.followed_users.paginate(:page => params[:page])
+   @feed_apps = current_user.app_feed.paginate(:page => params[:page])
+   render 'show_follow'
+  end
+ 
+  def followers
+   @title = "Followers"
+   @user = User.find(params[:id])
+   @users = @user.followers.paginate(:page => params[:page])
+   render 'show_follow'
+  end
+
+
+
 
  private
 
