@@ -2,7 +2,8 @@ class AppliancesController < ApplicationController
  before_filter :signed_in_user
  
  def new
-   @appliance = Appliance.new 
+   @user=User.find(params[:user_id])
+   @appliance = @user.appliances.build
  end
 
  def show
@@ -14,17 +15,21 @@ class AppliancesController < ApplicationController
     redirect_to root_path
    end
    @user=current_user
-   @public_apps=current_user.appliances.find_all_by_activation(true)
-   @private_apps=current_user.appliances.find_all_by_activation(false)
+   if !@user.admin?
+    @public_apps=current_user.appliances.find_all_by_activation(true)
+    @private_apps=current_user.appliances.find_all_by_activation(false)
+   else
+    @all_apps = Appliance.all
+   end
  end
 
  def create
   @appliance = current_user.appliances.build(params[:appliance])
   if @appliance.save
    flash[:success] = "Appliance Created"
-   redirect_to root_path
+   redirect_to user_appliances_path
   else
-   render 'static_pages/home'
+   render 'new'
   end
  end
   

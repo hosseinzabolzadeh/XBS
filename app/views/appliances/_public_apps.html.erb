@@ -1,0 +1,20 @@
+<div align="center" style="width:100%; overflow:auto;">
+ <% @public_apps.each do |app| %>
+ <%= link_to(user_appliance_path(current_user, app)) do %>
+  <div class="app_item">
+   <div style="height:100%; float:left; width:30%;">
+    <img class="app_icon" src=<%=asset_path app.icon%> height="100", width="100">
+   </div>
+   <div align="left" style="height:100%; float:left; width:70%; border-style:solid; border-width:0px;">
+    <h1 style="margin-top:40px; margin-bottom: 0px; line-height:0px; color:rgb(70,70,70);"><%= app.name %></h1>
+    <br>
+    <p style="font-family: serif;  color:rgb(70,70,70); text-align: justify;"><%= app.description %></p>
+    <%= link_to "Edit", edit_user_appliance_path(current_user, app) %>
+    <% if current_user?(app.user) %>
+     <%= link_to "Delete", user_appliance_path(current_user, app), :method => :delete, :confirm => "Are You Sure?", :title => app.name %>
+    <% end %>
+   </div>
+  </div>
+  <% end %>
+ <% end %>
+</div>

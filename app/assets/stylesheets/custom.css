@@ -215,3 +215,16 @@ a.footer_menu
 .alert-block p + p {
   margin-top: 5px;
 }
+
+.flat_btn {
+  background-color: darkgray;
+  border-width: 0px;
+  margin-top: 10px;
+  height: 30px;
+  width: 120px;
+
+}
+
+.flat_btn:hover {
+  color: white;
+}

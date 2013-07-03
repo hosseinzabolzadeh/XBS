@@ -1,6 +1,6 @@
 <% provide(:title, 'New App') %>
       <div>
-        <%= form_for(@appliance) do |f| %>
+        <%= form_for([@user, @appliance]) do |f| %>
         <%= render 'shared/error_messages', :object => f.object %>
         <%= f.text_field :name, :value => "Appliance Name", :class => "input_text" %>
         <%= f.text_field :description, :value => "Appliance Description", :class => "input_text" %>

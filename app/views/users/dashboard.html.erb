@@ -12,10 +12,9 @@
 		  <span class="descr">jQuery Div Slider &amp; HTML Slider</span> 
 		  <div style="width:80%; text-align:justify;">
 		  	<span class="dashboard_text">Packages are the smallest appliance building blocks. You can upload your own package into your appliance</span>
+		  	<button class="flat_btn" onclick="location.href='<%= new_user_appliance_path(@user) %>'" >Create New App</button>
+		  	<button class="flat_btn" onclick="location.href='<%= user_appliances_path(@user) %>'" >Browse Your Apps</button>
 		  </div>
-		  <br>
-		  <div class="dashboard_button_left">Browse<br>Your Package</div>
-		  <div class="dashboard_button_right">Create<br>Your Package</div>
 		</span>
 		</a>
 </div>
