@@ -1,14 +1,37 @@
 <%=provide(:title, @user.first_name + "'s Profile") %>
-<div>
- <h1>Profile information and Image</h1>
- <span><b>Name: </b> <%= @user.first_name %></span> <br>
- <span><b>Family: </b><%= @user.last_name %></span> <br>
- <span><b>Email Address: </b><%= @user.email %></span> <br>
+<%= render 'layouts/user_pannel' %>
+<div align="center" style="overflow:auto;">
+ <div style="margin-right:10px; float:left;">
+  <div style="height:253px; width:400px; background-color: rgb(230,230,230); margin-top:20px;">
+ 	 <img style="position:relative; float:left; margin-left:20px; margin-right:20px; margin-top:40px;" height="157" width="123" src=<%=asset_path "zabolzadeh.jpg"%>>
+ 	 <div style="padding-top:50px;">
+ 	  <span style="color: black; font-size:30px;"><%= @user.first_name %></span><br>
+ 	  <span style="color: black; font-size:30px;"><%= @user.last_name %></span><br>
+ 	  <span style="color:gray;"><%= @user.email %></span><br>
+ 	  <span style="color:gray;"><%= @user.created_at %></span>
+  	 </div>
+  	   <div>
+        <%= render 'follow_form' if signed_in? %>
+       </div>
+       <div>
+        <%=render 'shared/followstats' %>
+       </div>
+  </div>
+  <div align="center" style="height:44px; width:400px; background-color: rgb(179,179,179)">
+  	 <% if !@user.is_firm %>
+  	  <span style="color: black; font-size:20px;">Individual Developer</span>
+ 	 <% else %>
+      <h3>Company</h3>
+     <% end %>
+  </div>
+ </div>
+ <div align="left" style="float:left; margin-top:20px;">
+ 	<span style="color:gray; font-size:20px;">DESCRIPTION</span><br>
+ 	<span><%= current_user.description %></span><br>
+ 	<span style="color:gray; font-size:20px;">SUMMERY INFORMATION</span><br>
+ 	<%= render 'shared/apps_stat' %>
+ </div>
 </div>
-
-<div>
- <%=render 'shared/followstats' %>
-</div>
-<div>
- <%= render 'follow_form' if signed_in? %>
-</div>
+<div class="app_pannel"><h3 class="pannel_title">PUBLIC APPS</h3></div>
+<%= render 'user_apps_on_profile' %>
+<div class="app_pannel"><h3 class="pannel_title">PUBLIC VAPPS</h3></div>

@@ -1,0 +1,67 @@
+.container
+{
+	display: table;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.main_placeholder_title_panel
+{
+	background-color: rgb(230,230,230);
+	width: 1000px;
+	height:62px;
+
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.main_placeholder_title_text
+{
+	text-transform: uppercase;
+	position: relative;
+	margin-left: 20px;
+	font-family: 'freesans';
+}
+
+.main_placeholder_title_body
+{
+	display: table-cell;
+	vertical-align: middle;
+	background-color: rgb(230,230,230);
+	width: 1000px;
+	overflow: auto;
+}
+
+.back_btn
+{
+	height: 50px;
+	width: 67px;
+	background-color: rgb(230,230,230);
+}
+
+.flat_item
+{
+	height: 160px;
+	width: 320px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	float: left;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.flat_item_image
+{
+	margin: auto;
+	float: none;
+}
+
+.help_icon
+{
+	margin-right: 20px;
+	height: 50px;
+	position: relative;
+	width: 50px;
+	background-color: rgb(204,204,204);
+	float: right;
+}

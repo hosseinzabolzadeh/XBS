@@ -222,9 +222,21 @@ a.footer_menu
   margin-top: 10px;
   height: 30px;
   width: 120px;
+}
 
+.blue_flat_btn {
+  background-color: rgb(51,102,153);
+  color: lightgray;
+  border-width: 0px;
+  margin-top: 10px;
+  height: 30px;
+  width: 120px;
 }
 
 .flat_btn:hover {
+  color: white;
+}
+
+.blue_flat_btn:hover {
   color: white;
 }

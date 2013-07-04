@@ -1,0 +1,9 @@
+<div>
+	<% @user.appliances.each do |app| %>
+	 <div>
+	 	 <img src=<%=asset_path app.icon%> height="50px" width="50px">
+		 <%= app.name %>
+		 <%= app.created_at %>
+	 </div>
+	<% end %>
+</div>

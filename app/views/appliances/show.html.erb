@@ -1,2 +1,65 @@
-<h1> Appliance Show Page </h1>
-<h2>The appliance Name is: <%= @appliance.name %></h2>
+<% provide(:title, @appliance.name + " App" ) %>
+<%= render 'layouts/user_pannel' %>
+<div align="center" style="overflow:auto;">
+ <div style="margin-right:10px; float:left;">
+  <div style="height:253px; width:400px; background-color: rgb(230,230,230); margin-top:20px;">
+ 	 <img style="position:relative; float:left; margin-left:20px; margin-right:20px; margin-top:40px;" height="157" width="123" src=<%=asset_path @appliance.icon%>>
+ 	 <div style="padding-top:50px;">
+ 	  <span style="color: black; font-size:30px;"><%= @appliance.name %></span><br>
+ 	  <span style="color:gray;"><%= @appliance.created_at %></span>
+ 	  <br>Created By: 
+  	 </div>
+  </div>
+  <div align="center" style="height:60px; width:400px; background-color: rgb(193, 214, 193)">
+  	Successfully Build
+  </div>
+  <div align="center" style="height:44px; width:400px; background-color: rgb(179,179,179)">
+  	<%= @appliance.name %>
+  </div>
+ </div>
+
+
+
+
+
+
+
+ <div align="left" style="float:left; margin-top:20px;">
+ 	<span style="color:gray; font-size:20px;">DESCRIPTION</span><br>
+ 	<span><%= @appliance.description %></span><br>
+ 	<span style="color:gray; font-size:20px;">ACTION</span><br>
+ 	<div align="center" style="height: 45px; width:165px; float:left; background-color: rgb(103, 175, 65); color:white; font-size:20px; margin-right:10px; margin-top:10px;">Download</div>
+ 	<div align="center" style="height: 45px; width:165px; float:left; background-color: rgb(51, 102, 153); color:white; font-size:20px; margin-right:10px; margin-top:10px;">Clone</div>
+ 	<div align="center" style="height: 45px; width:165px; float:left; background-color: rgb(226,26,44); color:white; font-size:20px; margin-right:10px; margin-top:10px;">Delete</div>
+ 	<div align="center" style="height: 45px; width:165px; float:left; background-color: rgb(255, 185, 0); color:white; font-size:20px; margin-right:10px; margin-top:10px;">Edit</div>
+ 	<br>
+ 	<div align="center" style="height: 45px; width:165px; float:left; background-color: rgb(155, 79, 151); color:white; font-size:20px; margin-right:10px; margin-top:10px;">Test</div>
+ 	<div align="center" style="height: 45px; width:165px; float:left; background-color: rgb(250, 104, 0); color:white; font-size:20px; margin-right:10px; margin-top:10px;">Activate</div>
+ 	<div align="center" style="height: 45px; width:165px; float:left; background-color: rgb(223, 38, 136); color:white; font-size:20px; margin-right:10px; margin-top:10px;">View Files</div>
+ 	<br>
+ 	<br>
+ 	<span style="color:gray; clear:both; float:left; font-size:20px;">SUMMERY INFORMATION</span>
+ 	<div style="clear: both; margin-top: 10px; margin-right:10px; height: 157px; text-align:center; width:217px; float:left; background-color: rgb(230, 230, 230); color:gray; font-size:20px;">
+ 		<h4>Base Template</h4>
+ 		<span>20</span>
+ 	</div>
+ 	<div style="margin-top: 10px; margin-right:10px; height: 157px; text-align:center; width:217px; float:left; background-color: rgb(230, 230, 230); color:gray; font-size:20px;">
+ 		<h4>Base Template</h4>
+ 		<span>20</span>
+ 	</div>
+ 	<div style="margin-top: 10px; margin-right:10px; height: 157px; text-align:center; width:217px; float:left; background-color: rgb(230, 230, 230); color:gray; font-size:20px;">
+ 		<h4>Base Template</h4>
+ 		<span>20</span>
+ 	</div>
+ </div>
+   <div style="margin-right:10px; clear:both; float:left;">
+  <div style="height:243px; width:400px; text-align:center; background-color: rgb(230,230,230); margin-top:20px;">
+  	<h2>Other Releases:</h2>
+  	<h4>version 1.0.1</h4>
+  	<h4>version 2.0.1</h4>
+  	<h4>version 3.0.1</h4>
+  	<h4>version 4.0.1</h4>
+  </div>
+ </div>
+</div>
+<div style="height:415px; width:100%; text-align:center; background-color: rgb(51,102,153); margin-top:20px;"></div>
