@@ -2,8 +2,15 @@ class AppliancesController < ApplicationController
  before_filter :signed_in_user
  
  def new
-   @user=User.find(params[:user_id])
+   @user = User.find(params[:user_id])
    @appliance = @user.appliances.build
+   @appliance.icon = "App.png"
+   @templates = Template.all
+   
+   respond_to do |format|
+    format.html { render 'new.html.erb' }
+    format.js
+   end
  end
 
  def show
@@ -27,7 +34,7 @@ class AppliancesController < ApplicationController
   @appliance = current_user.appliances.build(params[:appliance])
   if @appliance.save
    flash[:success] = "Appliance Created"
-   redirect_to user_appliances_path
+      redirect_to edit_user_appliance_path(current_user, @appliance)
   else
    render 'new'
   end
@@ -53,6 +60,19 @@ class AppliancesController < ApplicationController
    @appliance = Appliance.find(params[:id])
    @appliance.destroy
    redirect_to user_appliances_path
+  end
+
+
+  #Extra Actions used in studio ajax asynchronous connection
+  def update_build_data
+   @cpu = params[:cpu]
+   @memory = params[:memory]
+   @swap = params[:swap]
+   @disk = params[:disk]
+   #Update the Appliacne Json file, with these values.
+   respond_to do |format|
+    format.js
+   end
   end
 
 end

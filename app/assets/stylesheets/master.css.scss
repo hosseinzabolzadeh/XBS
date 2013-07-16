@@ -1,0 +1,222 @@
+/* This css file, contain master page attributes. Header, footer and most of the body XBS theme elements(e.g. XBS_H1, XBS_H2, ...), are
+stored in this file. Also all XBS theme colors' rgb value, are stored in this css file, via css variable.
+*/
+
+/* CONSTATS VALUES */
+$headerHeight: 100px;
+$login_part_width: 215px;
+$siteHorizontalMargin: 5%;
+$headerMenuWidth: 250px;
+$bodyMinWidth: 900px;
+$footerColor: rgb(51,51,51);
+$footerHeight: 320px;
+
+/* XBS THEME COLOR RGB VALUES*/
+$XBSDarkGray: rgb(51,51,51);
+$XBSgreen: rgb(103,175,65);
+
+/* INCLUDING ALL CLASSES IN SITE HEADER*/
+.site-header
+{
+ height: $headerHeight;
+ width: 100%;
+ margin-left: 0px;
+ padding:0 0 0 0px;
+ background-color: rgb(248, 247, 239);
+}
+
+.login-part-logged-in /* When user is logged-in to the site */
+{
+ height: $headerHeight;
+ width: $login_part_width;
+ float: right;
+ text-align: center;
+ margin-left: 0px;
+ font-size: 25px;
+ color: white;
+ margin-right: $siteHorizontalMargin;
+ margin-top: auto;
+ background-color: $XBSDarkGray;
+}
+
+.login-part-not-logged-in /* When user is not logged-in to the site */
+{
+ height: $headerHeight;
+ width: $login_part_width;
+ text-align: center;
+ margin-left: 0px;
+ font-size: 25px;
+ color: white;
+ margin-right: $siteHorizontalMargin;
+ margin-top: auto;
+ background-color: $XBSgreen;
+ float: right;
+}
+
+table.stacked-item /* This class used to hold vertically stacked items in a fixed size div in manner like vertically aligned. */
+{
+ height:100%;
+ width:100%;
+ border-width:1px;
+ text-align:center;
+}
+
+table.sided-items /* This class used to hold horizontally stacked items in a fixed size div with all vertically aligned. */
+{
+   text-align: center;
+   margin:auto;
+   height:100%;
+   width:80%;
+}
+
+.login-notification-Panel
+{
+  text-align: center;
+}
+
+.header-menu-container
+{
+  width: $headerMenuWidth;
+  height: 100%;
+  position: relative;
+  float: right;
+  display: table;
+  margin-right: 20px;
+}
+
+.header-menu-container a { display: table-cell; vertical-align: middle; text-align: center; }
+
+.header-menu-item
+{
+ color: rgb(102,102,102);
+ font-size:20px;
+}
+
+/* The most useful class to contain items with vertically alinged.*/
+/*-----------*/
+.vertical-align-container
+{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  float: right;
+  display: table;
+}
+
+.vertical-align-item
+{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+.admin_main_menu
+{
+ color: rgb(255,0,0);
+ font-size:20px;
+ margin-top: 37px;
+ padding-left:10px;
+ padding-right:10px;
+ display: none;
+}
+
+/*-----------*/
+body
+{
+ margin: 0 0 0 0px;
+ min-width: $bodyMinWidth;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a.large
+{
+  color: white;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+a.small
+{
+  color: white;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.site-message
+{
+
+}
+
+.site-content
+{
+	
+}
+
+.site-logo
+{
+ margin-left: $siteHorizontalMargin;
+ margin-top: 25px;
+ background-image: url("BSLogo.png");
+ background-repeat: no-repeat;
+ float: left;
+ height: 44px;
+ width: 298px;
+}
+
+/* -----------------------SITE FOOTER----------------------- */
+.site-footer
+{
+ background-color: $footerColor;
+ height: $footerHeight;
+ width:100%;
+ text-align: center;
+}
+
+.site-footer-menu a /*Footer links */
+{
+  font-size:20px;
+  color:white;
+  text-transform: uppercase;
+  font-family: 'freesans';
+}
+
+.site-footer table
+{
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+.site-footer strong
+{
+  font-family: 'freesans';
+  color: $XBSgreen;
+  font-size: 15px;
+}
+
+.site-footer-copyright
+{
+  margin-top: 10px;
+  padding-top: 8px;
+  height: 30px;
+  width:100%;
+  background-color:rgb(26,26,26);
+  font-family: 'freesans';
+  color: white;
+  font-size: 15px;
+}
+/* ---------------------------------------------------------- */
+
+/* -----------------------SITE DEBUG----------------------- */
+/*Debug part is shown only in development environment*/
+.site-debug
+{
+
+}
+/* ---------------------------------------------------------- */

@@ -1,0 +1,69 @@
+<%= form_tag update_build_data_user_appliance_path(@user,@appliance), :method => :post, :remote => true do %>
+  <% if @appliance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@app.errors.count, "error") %> prohibited this app from being saved:</h2>
+      <ul>
+      <% @app.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= label_tag :Cpu %><br />
+    <%= text_field_tag :cpu %>
+  </div>
+  <div class="field">
+    <%= label_tag :Memory %><br />
+    <%= text_field_tag :memory %>
+  </div>
+  <div class="field">
+    <%= label_tag :Swap_Space %><br />
+    <%= text_field_tag :swap %>
+  </div>
+  <div class="field">
+    <%= label_tag :Disk_Space %><br />
+    <%= text_field_tag :disk %>
+  </div>
+  <div class="actions">
+    <%= submit_tag  %>
+  </div>
+<% end %>  
+
+<!-- 
+<%= form_for (update_build_data_user_appliance_path(@user,@appliance), :remote => true) do |f| %>
+  <% if @appliance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@app.errors.count, "error") %> prohibited this app from being saved:</h2>
+      <ul>
+      <% @app.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Cpu %><br />
+    <%= f.text_field :cpu, :id =>"appliance_cpu_txt", :class => "input_text" %>
+  </div>
+  <div class="field">
+    <%= f.label :Memory %><br />
+    <%= f.text_field :memory, :id =>"appliance_memory_txt", :class => "input_text" %>
+  </div>
+  <div class="field">
+    <%= f.label :Swap_Space %><br />
+    <%= f.text_field :swap, :id =>"appliance_swap_txt", :class => "input_text" %>
+  </div>
+  <div class="field">
+    <%= f.label :Disk_Space %><br />
+    <%= f.text_field :disk, :id =>"appliance_disk_txt", :class => "input_text" %>
+  </div>
+  <div class="actions">
+    <%= f.submit :id => "frm_submit" %>
+  </div>
+
+<% end %>
+
+-->

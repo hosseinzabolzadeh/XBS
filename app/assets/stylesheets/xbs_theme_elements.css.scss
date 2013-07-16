@@ -1,0 +1,110 @@
+$siteHorizontalMargin: 5%;
+h1.xbs_h1
+{
+	background-color: rgb(230,230,230);
+	padding: 0 0 0 0px;
+	margin: 0 0 0 0px;
+	font-family: 'Serif';
+	font-size: 16px;
+	padding-left: $siteHorizontalMargin;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	line-height: 50px;
+	color: rgb(128,128,128);
+}
+
+h1.xbs_h1_sub /*This title is subtitle of the main xbs_h1 header*/
+{
+	background-color: rgb(230,230,230);
+	padding: 0 0 0 0px;
+	margin: 0 0 0 0px;
+	font-family: 'Serif';
+	font-size: 16px;
+	padding-left: $siteHorizontalMargin;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	line-height: 50px;
+	color: rgb(128,128,128);
+}
+
+
+.input_text
+{
+	width: 85%;
+	height: 40px;
+	border-style: solid;
+	border-color: rgb(230,230,230);	
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: rgb(200,200,200);
+	text-indent: 10px;
+	outline: none;
+	font-family: Helvetica, Arial, "Sans Serif";
+	font-size: 13px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0px 0px 10px 0px #eee;
+	-moz-box-shadow: inset 0px 0px 10px 0px #eee;
+	box-shadow: inset 0px 0px 10px 0px #eee;
+}
+
+.input_text.tiny
+{
+	width: 40%;
+	height: 20px;
+}
+
+
+.input_text:focus {
+	border-color: #999;
+	-webkit-box-shadow: inset 0px 0px 10px 0px #ddd;
+	-moz-box-shadow: inset 0px 0px 10px 0px #ddd;
+	box-shadow: inset 0px 0px 10px 0px #ddd;
+}
+
+
+.input_button
+{
+	cursor: pointer;
+	padding: 10px;
+	width: 300px;
+	color: #555;
+	text-shadow: 1px 1px 1px #DDD;
+	font-family: Helvetica, Arial, "Sans Serif";
+	font-size: 13px;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 0px 1px 0px #FFF;
+	-moz-box-shadow: inset 0px 0px 1px 0px #FFF;
+	box-shadow: inset 0px 0px 1px 0px #FFF;
+	background: #FFF;
+	background: -moz-linear-gradient(top, #F9F9F9 0%, #DDD 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F9F9F9), color-stop(100%,#DDD));
+	background: -webkit-linear-gradient(top, #F9F9F9 0%,#DDD 100%);
+	background: -o-linear-gradient(top, #F9F9F9 0%,#DDD 100%);
+	background: -ms-linear-gradient(top, #F9F9F9 0%,#DDD 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F9F9F9', endColorstr='#DDD',GradientType=0 );
+	background: linear-gradient(top, #F9F9F9 0%,#DDD 100%);
+}
+
+.input_button:hover {
+	color: #444444;
+	border-color: #BBB;
+	background: #CCC;
+	background: -moz-linear-gradient(top, #F9F9F9 0%, #CCC 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F9F9F9), color-stop(100%,#CCC));
+	background: -webkit-linear-gradient(top, #F9F9F9 0%,#CCC 100%);
+	background: -o-linear-gradient(top, #F9F9F9 0%,#CCC 100%);
+	background: -ms-linear-gradient(top, #F9F9F9 0%,#CCC 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F9F9F9', endColorstr='#CCC',GradientType=0 );
+	background: linear-gradient(top, #F9F9F9 0%,#CCC 100%);
+}
+
+.input_button:active {
+	border-color: #AAA;
+	background: #DDD;
+}

@@ -1,10 +1,11 @@
 class Appliance < ActiveRecord::Base
-  attr_accessible :description, :icon, :name, :activation
-  before_save {set_defaults}
+  attr_accessible :description, :icon, :name, :activation, :arch, :template_id
+  after_initialize :default_values
   belongs_to :user
   validates :name, :presence => true, :length => {:maximum => 50}
   validates :user_id, :presence => true
   default_scope :order => 'appliances.created_at DESC'
+  belongs_to :templates
   
   def self.from_users_followed_by(user)
    followed_user_ids = "SELECT followed_id FROM relationships WHERE follower_id = :user_id"
@@ -13,9 +14,8 @@ class Appliance < ActiveRecord::Base
 
 
   private
-  def set_defaults
-   if self.activation.nil?
-    self.activation = false
-   end
+  def default_values
+    self.activation ||= "false"
+    self.icon ||= "App.png"
   end
 end

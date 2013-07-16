@@ -1,0 +1,52 @@
+<div class="main_placeholder_title_panel" ><div class="main_placeholder_title_text"> Select Your Appliance Base Template</div></div>
+<div id="app_create_form">
+ <%= form_for([@user, @appliance]) do |f| %>
+         
+  <div class="main_placeholder_title_body" style="text-align: center;">
+   <div id="appTemplate" class="field">
+    <%= f.hidden_field :template_id, :id => "app_template1", :value => "Default" %>
+    <div id="selectable">
+     <% @templates.each do |template| %>
+       <div id=<%=template.id%> class="flat_item _<%=template.id %>"><img class="flat_item_image" src=<%=asset_path template.image%> ></div>
+     <% end %>
+    </div>
+   </div>
+
+   <div id="appArch" class="field" style="display:none;">
+    <%= f.hidden_field :arch, :id => "app_arch", :value => "32Bit" %>
+     <div id="selectable2">
+      <div class="flat_item _1"><img class="flat_item_image" src=<%=asset_path "bit_32.png"%>></div>
+      <div class="flat_item _2"><img class="flat_item_image" src=<%=asset_path "bit_64.png"%>></div>
+     </div>
+   </div>
+   </div>
+   
+  <div class="container">
+   <div class="main_placeholder_title_panel" ><div class="main_placeholder_title_text"> Your Appliance Name: <%= f.text_field :name %> </div></div>
+  </div>
+  
+  <div id="appSubmitBtn" style="display:none;">
+   <%= f.submit "Create New Appliance", :class => "input_button" %>
+  </div>
+
+ <% end %>
+</div>
+<script>
+init();
+
+
+var selected_item =0;
+function save_baseTemplate()
+{
+ selected_item = $(".ui-selected").attr("id");
+ app_template1.value = selected_item;
+ alert(selected_item); 
+}
+
+
+function init()
+{
+ $("#selectable").selectable();
+ $("#selectable2").selectable();
+} 
+</script>

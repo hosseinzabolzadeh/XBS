@@ -1,56 +1,61 @@
-<div class="MainHeader">
-   <%= link_to "" , root_path, :class => "logo" %> 
-    <% if signed_in? %>
-    <div class="login_part_logged_in">
-     <div class="login_part_Top_header">
-<div id='cssmenu'>
-  <ul>
-     <li class='has-sub '> <a><%= current_user.first_name %></a>
-        <ul>
-           <li class='has-sub '><%= link_to "MyProfile", current_user %>
-           </li>
-           <li class='has-sub '><%= link_to "Dashboard", dashboard_user_path(current_user) %>
-           </li>
-           <li class='has-sub '><%= link_to "Settings", edit_user_path(current_user) %>
-           </li>
-           <li class='has-sub '><%= link_to "Sign out", signout_path, :method => "delete"%>
-           </li>
-        </ul>
-     </li>
-  </ul>
-</div>
-     </div>
-     <div class="login_notification_Panel">
-      <table style="text-align: center; margin:auto;" border="0" cellpadding="2" cellspacing="10">
-       <tbody>
-        <tr>
-         <td style="vertical-align: top;"><img style="width: 35px; height: 35px;" src=<%=asset_path "message.png"%>><br>
-         </td>
-         <td style="vertical-align: top; text-align: center;"><img style="width: 32px; height: 32px;" src=<%=asset_path "update.png"%>><br>
-         </td>
-         <td style="vertical-align: top;"><img style="width: 32px; height: 30px;" src=<%=asset_path "alert.png"%>><br>
-         </td>
-        </tr>
-       </tbody>
-      </table>
-     </div>
-     </div>
-    <% else %>
-    <div class="login_part_not_logged_in">
-     <%= link_to "SIGN UP NOW!", signup_path, :class => "signup_link" %>
-     <br>
-     <%= link_to "sign in", signin_path, :class => "login_link" %>
-     </div>
-       <% end %>
-    
-       <div class="menu_pannel">
-   <%= link_to "Home", root_path, :class => "main_menu" %>
-   <%= link_to "AppMarket", "http://market.xamin.ir", :class => "main_menu" %>
-   <%= link_to "Help", '#', :class => "main_menu" %>
-    <% if signed_in? && admin_user? %>
+<div class="site-header">
+  <%= link_to "" , root_path, :class => "site-logo" %> <!-- Show XBS Logo -->
+  <% if signed_in? %> <!-- Check if user signed in or not -->
+  <div class="login-part-logged-in">
+   <div class="login_part_Top_header">
+    <div id='cssmenu'> <!-- Pop up menu when mouse hover on user name in the login pannel -->
+      <ul>
+         <li class='has-sub '> <a id="current_user_name" value=<%= current_user.first_name %>><%= current_user.first_name %></a><!--The id of this element will be used to get value of current user(firstname) to suggest a new name for appliance creation in the first step of studio environment.-->
+            <ul>
+               <li class='has-sub '><%= link_to "MyProfile", current_user %>
+               </li>
+               <li class='has-sub '><%= link_to "Dashboard", dashboard_user_path(current_user) %>
+               </li>
+               <li class='has-sub '><%= link_to "Settings", edit_user_path(current_user) %>
+               </li>
+               <li class='has-sub '><%= link_to "Sign out", signout_path, :method => "delete"%>
+               </li>
+            </ul>
+         </li>
+      </ul>
+    </div>
+   </div>
+   <div class="login-notification-Panel">
+    <table class="sided-items" cellspacing="8">
+     <tbody>
+      <tr>
+       <td ><img style="width: 35px; height: 35px;" src=<%=asset_path "message.png"%>><br>
+       </td>
+       <td ><img style="width: 32px; height: 32px;" src=<%=asset_path "update.png"%>><br>
+       </td>
+       <td ><img style="width: 32px; height: 30px;" src=<%=asset_path "alert.png"%>><br>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   </div>
+  <% else %><!-- If user is not logged in, so the login and sign up links must be shown. -->
+    <div class="login-part-not-logged-in">
+     <table class="stacked-item">
+      <tr>
+        <td><span><%= link_to "SIGN UP NOW!", signup_path, :class => "large" %></span></td>
+      </tr>
+      <tr>
+        <td><span><%= link_to "sign in", signin_path, :class => "small" %></span></td>
+      </tr>
+     </table>
+    </div>
+  <% end %> <!-- End of if statement -->
+  <div class="header-menu-container">
+   <%= link_to "Home", root_path, :class => "header-menu-item" %>
+   <%= link_to "AppMarket", "http://market.xamin.ir", :class => "header-menu-item" %>
+   <%= link_to "Help", '#', :class => "header-menu-item" %>
+
+   <% if signed_in? && admin_user? %> <!-- If the logged in user is admin, several other menue items needs to be shown. But Remove this part. Every administration actions needs to be moved on user dashboard link, when the user is admin.-->
     <br>
     <%= link_to "Users", users_path, :class => "admin_main_menu" %>
     <%= link_to "Appliances", user_appliances_path(current_user), :class => "admin_main_menu" %>
    <% end %>
-</div>
+  </div>
 </div>

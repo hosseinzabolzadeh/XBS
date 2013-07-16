@@ -1,7 +1,11 @@
 RailsTemplateApp::Application.routes.draw do
  
   resources :users do 
-   resources :appliances
+   resources :appliances do
+    member do
+     post 'update_build_data'
+    end
+   end
    member do
     get 'dashboard'
    end
@@ -12,7 +16,8 @@ RailsTemplateApp::Application.routes.draw do
 
   resources :sessions, :only => [:new, :create, :destroy]
   resources :relationships, :only => [:create, :destroy]
-
+  resources :packages
+  resources :templates
 
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'

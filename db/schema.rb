@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130704092517) do
+ActiveRecord::Schema.define(:version => 20130714140047) do
 
   create_table "appliances", :force => true do |t|
     t.string   "name"
@@ -20,9 +20,27 @@ ActiveRecord::Schema.define(:version => 20130704092517) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.boolean  "activation"
+    t.integer  "template_id"
+    t.string   "arch"
   end
 
   add_index "appliances", ["user_id", "created_at"], :name => "index_appliances_on_user_id_and_created_at"
+
+  create_table "base_templates", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "packages", :force => true do |t|
+    t.string   "name"
+    t.string   "version"
+    t.integer  "size"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
@@ -34,6 +52,15 @@ ActiveRecord::Schema.define(:version => 20130704092517) do
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], :name => "index_relationships_on_follower_id_and_followed_id", :unique => true
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
+
+  create_table "templates", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "version"
+    t.string   "image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "first_name"

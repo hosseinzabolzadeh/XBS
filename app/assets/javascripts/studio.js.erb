@@ -1,0 +1,26 @@
+var current_step;
+current_step = 1;
+
+function setTemplate(templateId)
+{
+	app_base_template.value = templateId;
+}
+
+function gotoNextStep()
+{
+  current_step ++;
+  if (current_step >3)
+  	current_step =3;
+  	switch(current_step)
+	{
+	case 1:
+	  appTemplate.style.display = 'block';
+	  break;
+	case 2:
+          set_hidden_values();
+	  appTemplate.style.display = 'none';
+	  appArch.style.display = 'block';
+	  appSubmitBtn.style.display = 'block';
+	  break;
+	}
+}

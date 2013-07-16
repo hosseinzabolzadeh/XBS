@@ -1,0 +1,10 @@
+<div>
+        <%= form_for(@template) do |f| %>
+        <%= render 'shared/error_messages', :object => f.object %>
+        <%= f.text_field :name,:value => "Template Name", :class => "input_text" %>
+        <%= f.text_field :description, :value => "Description", :class => "input_text" %>
+        <%= f.text_field :version, :value => "Version", :class => "input_text" %>
+        <%= f.text_field :image, :value => "Image", :class => "input_text" %>
+        <%= f.submit "Create New Template", :class => "input_button" %>
+        <% end %>
+</div>

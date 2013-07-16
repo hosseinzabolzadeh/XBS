@@ -7,15 +7,25 @@
   <%= csrf_meta_tags %>
  </head>
  <body>
-  <div>
-   <%=render 'layouts/header' %>
+
+   <%=render 'layouts/header' %> <!-- Render the site header. See the header.html.erb file in layouts directory.-->
+
+  <div class="site-message"> <!-- Renders all alert, warning and other type of messages(e.g. "The appliance was created successfully") -->
    <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
    <% end %>
+  </div>
+
+  <div class="site-content"> <!-- Renders site contents. All of the other page contents are rendered in this part of layout. -->
    <%= yield %>
-   <%=render 'layouts/footer' %>
+  </div>
+
+   <%=render 'layouts/footer' %> <!-- Render the site footer. See the header.html.erb file in layouts directory.-->
+
+  <div class="site-debug"> <!--Render the site debug information. Debug information are only shows when the application run in development env-->
    <%= debug(params) if Rails.env.development? %>
    <%= yield(:params) %>
   </div>
+
  </body>
 </html>

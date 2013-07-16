@@ -1,11 +1,7 @@
-<% provide(:title, 'New App') %>
-      <div>
-        <%= form_for([@user, @appliance]) do |f| %>
-        <%= render 'shared/error_messages', :object => f.object %>
-        <%= f.text_field :name, :value => "Appliance Name", :class => "input_text" %>
-        <%= f.text_field :description, :value => "Appliance Description", :class => "input_text" %>
-        <%= f.text_field :icon, :value => "Appliance Icon", :class => "input_text" %>
-        <%= f.text_field :activation, :value => "Activation", :class => "input_text" %>
-        <%= f.submit "Create New Appliance", :class => "input_button" %>
-        <% end %>
-      </div>
+<% provide(:title, 'Create New App') %>
+ <%= render 'shared/clear_panel' %>
+<h1 class="xbs_h1"><strong>Step 1:</strong> Appliance Base Template</h1>
+<div class="studio_container">
+ <%= render 'form' %>
+</div>
+<button id = "nextStepBtn" onclick = "gotoNextStep()">Next Step</button>

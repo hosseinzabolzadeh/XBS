@@ -1,0 +1,31 @@
+<%= form_for([@user, @appliance], :remote => true) do |f| %>
+  <% if @appliance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@app.errors.count, "error") %> prohibited this app from being saved:</h2>
+      <ul>
+      <% @app.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Appliance_name %><br />
+    <%= f.text_field :name, :id =>"appliance_name_txt", :class => "input_text" %>
+  </div>
+  <div class="actions" style="display:none;">
+    <%= f.submit :id => "frm_submit" %>
+  </div>
+<% end %> 
+
+
+<script type="text/javascript">
+
+
+
+function changeNameTitle()
+{
+	$("#appliance_name_label").html(appliance_name_txt.value);
+}
+</script>

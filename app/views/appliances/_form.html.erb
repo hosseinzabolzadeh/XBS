@@ -1,0 +1,67 @@
+<div class="container">
+ <h1 class="xbs_h1_sub">Select Your Appliance Base Template</h1>
+ <div id="app_create_form">
+  <%= form_for([@user, @appliance]) do |f| %>
+   <div class="studio_content-placeholder" style="text-align: center;">
+    <div id="appTemplate" class="field">
+     <%= f.hidden_field :template_id, :id => "app_template1", :value => "Default" %>
+     <div id="selectable_template">
+      <% @templates.each do |template| %>
+        <div id=<%=template.id%> class="flat_item _<%=template.id %>" value=<%= template.name%>><img class="flat_item_image" src=<%=asset_path template.image%> ></div>
+      <% end %>
+     </div>
+    </div>
+
+    <div id="appArch" class="field" style="display:none;">
+     <%= f.hidden_field :arch, :id => "app_arch", :value => "32Bit" %>
+      <div id="selectable_arch">
+       <div class="flat_item _1" value="32"><img class="flat_item_image" src=<%=asset_path "bit_32.png"%>></div>
+       <div class="flat_item _2" value="64"><img class="flat_item_image" src=<%=asset_path "bit_64.png"%>></div>
+      </div>
+    </div>
+    </div>
+    
+    <h1 class="xbs_h1">Your Appliance Name: <%= f.text_field :name, :class => "input_text tiny"%></h1>
+   
+   <div id="appSubmitBtn" style="display:none;">
+    <%= f.submit "Create New Appliance", :class => "input_button" %>
+   </div>
+
+  <% end %>
+ </div>
+</div>
+
+<script>
+init();
+
+
+var selected_template =0;
+var selected_template_value ="";
+var selected_arch="";
+function set_hidden_values()//This function set all hidden fields to the value the user was inserted via the wizard elements.
+{
+ selected_template = $(".ui-selected").attr("id");
+ selected_template_value = $(".ui-selected").attr("value");
+ app_template1.value = selected_template;
+ $("#appliance_name_label").html($("#appliance_name").value);
+ suggest_name();
+}
+
+function suggest_name()//This function, suggest a new name for current appliance under construction in the frst step of studio environment, based on user selections.
+{
+  var suggested_name="";
+  suggested_name = $("#current_user_name").attr("value") + "'s " + selected_template_value ;
+  if (appliance_name.value=="")
+  {
+      appliance_name.value =suggested_name ;//This line assign a suggested value to the appliance name text box on the page.
+  }
+  return suggested_name;
+}
+
+
+function init()
+{
+ $("#selectable_template").selectable();
+ $("#selectable_arch").selectable();
+} 
+</script>

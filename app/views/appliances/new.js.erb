@@ -1,0 +1,9 @@
+<% if params[:step] == "2" %>
+  $("#app_body_container").html("<%= escape_javascript(render('appliances/studio_env/step2.html.erb')) %>")
+  me = $("#test_id").html.value
+  $("#appliance_name_h1").html("Test Appliance Name")
+<% end %>
+
+<% if params[:step] == "3" %>
+  $("#app_body_container").html("<%= escape_javascript(render('appliances/studio_env/step3.html.erb')) %>")
+<% end %>

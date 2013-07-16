@@ -1,0 +1,11 @@
+<div>
+        <%= form_for(@template) do |f| %>
+        <%= render 'shared/error_messages', :object => f.object %>
+        <%= f.text_field :name, :class => "input_text" %>
+        <%= f.text_field :description, :class => "input_text" %>
+        <%= f.text_field :version, :class => "input_text" %>
+        <%= f.text_field :image, :class => "input_text" %>
+        <%= f.submit "Save Changes", :class => "input_button" %>
+        <% end %>
+</div>
+

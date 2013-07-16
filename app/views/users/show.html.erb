@@ -1,5 +1,9 @@
 <%=provide(:title, @user.first_name + "'s Profile") %>
-<%= render 'layouts/user_pannel' %>
+<% if @user != current_user %>
+ <%= render 'layouts/user_pannel' %>
+<% else %>
+ <%= render 'shared/clear_panel' %>
+<% end %>
 <div align="center" style="overflow:auto;">
  <div style="margin-right:10px; float:left;">
   <div style="height:253px; width:400px; background-color: rgb(230,230,230); margin-top:20px;">

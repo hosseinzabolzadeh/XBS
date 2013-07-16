@@ -1,5 +1,38 @@
 <% provide(:title, 'Studio') %>
-      <div>
+<%= render 'layouts/appliance_pannel', :locals => {:appliance => @appliance} %>
+
+<div id = "tabs">
+<ul style=" margin-top:-53px; float:right; margin-right:5%;">
+<li><a href = "#start_tab">Start</a></li>
+<li><a href = "#software_tab">Software</a></li>
+<li><a href = "#configuration_tab">Configuration</a></li>
+<li><a href = "#files_tab">Files</a></li>
+<li><a href = "#build_tab">Build</a></li>
+<li><a href = "#publish_tab">Publish</a></li>
+</ul>
+<div id = "start_tab">
+    <%= render 'appliances/studio_forms/start' %>
+</div>
+
+<div id = "software_tab">
+    <%= render 'appliances/studio_forms/software' %>
+</div>
+
+<div id = "configuration_tab">
+    <%= render 'appliances/studio_forms/configuration' %>
+</div>
+
+<div id = "files_tab">
+    <%= render 'appliances/studio_forms/files' %>
+</div>
+
+<div id = "build_tab">
+    <%= render 'appliances/studio_forms/build' %>
+</div>
+
+<div id = "publish_tab">
+    <%= render 'appliances/studio_forms/publish' %>
+    <div id = "chap3">
         <%= form_for([@user, @appliance]) do |f| %>
          <%= render 'shared/error_messages', :object => f.object %>
          <%= f.text_field :name, :class => "input_text" %>
@@ -8,4 +41,24 @@
          <%= f.text_field :activation, :class => "input_text" %>
          <%= f.submit "Save Changes", :class => "input_button" %>
         <% end %>
-      </div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+$(init);
+
+
+function init()
+{
+    $("#tabs").tabs();
+    $("#appliance_name_txt").change(sendDataToServer);
+    $("#updateMessage").hide();
+}
+
+function sendDataToServer()
+{
+    $("#frm_submit").click();
+    changeNameTitle();
+}
+</script>

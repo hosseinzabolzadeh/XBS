@@ -1,0 +1,14 @@
+<div class="user_profile_pannel" id="user_panel_info">
+ <div class="user_info">
+  <img class="user_img" src=<%=asset_path @appliance.icon%>>
+   <div>
+     <h1 id="appliance_name_label" class="user_pannel_title"><%=@appliance.name%></h1>
+     <%= link_to "Architecture: " + @appliance.arch, '#', :class => 'profile_link' %>
+     <br>
+     <%= link_to "Based on: " + Template.name, "#", :class => 'profile_link' %>
+     <br>
+   </div>
+ </div>
+</div>
+
+

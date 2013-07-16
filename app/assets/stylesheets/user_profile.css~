@@ -11,24 +11,24 @@ body
 {
  width: 100%;
  height: 145px;
- background-color: rgb(81, 70, 56);
+ background-color: rgb(51,51,51);
 }
 
 .app_pannel
 {
  width:100%;
- height:50px;
+ height:53px;
+ margin-bottom: 20px;
  background-color: rgb(230, 230, 230);
 }
 
 img.user_img
 {
 	float:left;
-	padding-left:50px;
-	padding-top:15px;
-	padding-right:10px;
-	width:140px;
-	height:100px;
+	padding-left:70px;
+	padding-top:10px;
+	padding-right:20px;
+	height:124px;
 }
 
 h1.pannel_title
@@ -42,12 +42,12 @@ h3.pannel_title
 	margin-top:0px;
 	padding-top:12px;
 	color:rgb(100,100,100);
-	padding-left:50;
-	font-size:20px;
+	font-size:24px;
+	float: left;
+	margin-left: 160px;
 }
 .user_info
 {
-	width:45%;
 	height:100%;
 	float:left;
 }
@@ -200,4 +200,101 @@ h3.pannel_title
 	width: 70%;
 	height: 100%;
 	color: white;
+}
+
+
+.action_panel
+{
+	float:right;
+	height:100%;
+	margin-right: 100px;
+	width: 700px;
+	padding-right: 0px;
+}
+
+.action_item
+{
+	height:100%;
+	text-align:center;
+	color:white;
+	width: 215px;
+	float:right;
+}
+
+.profile_link
+{
+	color: white;
+}
+
+.action_link
+{
+	color: white;
+	margin-top: 10px;
+	font-size: 23px;
+}
+
+
+.dashboard_title
+{
+	font-size: 23px;
+	padding-top: 100px;
+	line-height:50px;
+	color:white;
+	text-transform:uppercase;
+	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
+}
+
+.dashboard_item
+{
+	height: 177px;
+	width: 325px;
+	background-color: rgb(155, 79, 151);
+	float:left;
+}
+
+.actions_title
+{
+	font-size: 25px;
+	color:rgb(100,100,100);
+	padding-top:30px;
+	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
+	padding-left: 8px;
+	padding-top: 50px;
+}
+
+
+.dashboard_button_left
+{
+	float:left;
+	width:160px;
+	height:60px;
+	padding-top: 3px;
+	background-color:rgb(102,102,102);
+	font-size: 15px;
+	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
+}
+
+.dashboard_button_right
+{
+	float:right;
+	width:160px;
+	height:60px;
+	padding-top: 3px;
+	font-size: 15px;
+	background-color:rgb(102,102,102);
+	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
+}
+
+.dashboard_text
+{
+	font-size: 15px;
+	font-family: 'Segoe UI','SegoeUI','Arial','Helvetica';
+}
+
+
+.statistic_panel
+{
+	height: 470px;
+	width: 100%;
+	background-color: rgb(51,102,153);
 }
